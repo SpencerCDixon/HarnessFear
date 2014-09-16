@@ -1,0 +1,20 @@
+<header>
+  <div class="navbar pretty">
+
+    <a href="/"><h1 id="logo">HARNESS FEAR</h1></a>
+
+    <nav>
+      <div id="user_nav">
+        <% if current_user %>
+          Signed in as <strong><%= current_user.name %></strong>!
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <div class="medium primary btn" style="margin-top: 8px; margin-right: 10px;">
+            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+          </div>
+        <% end %>
+      </div>
+    </nav>
+
+  </div>
+</header>

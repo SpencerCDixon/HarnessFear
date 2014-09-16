@@ -1,0 +1,6 @@
+<h1> Create a new story </h1>
+
+<%= form_for :story, url: stories_path do |f| %>
+<%= render 'form' %>
+<%= link_to 'Back', root_path %>
+<% end %>

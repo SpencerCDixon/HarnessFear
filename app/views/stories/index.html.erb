@@ -1,0 +1,9 @@
+<h1> Stories Of People Harnessing Their Fears </h1>
+<div class="medium primary btn">
+  <%= link_to 'New Story', new_story_path %>
+</div>
+<ul>
+<% @stories.each do |story| %>
+  <li>  <%= link_to story.title, story_path(story) %>: <%= story.body %> <%= link_to 'Edit', edit_story_path(story) %></li>
+<% end %>
+</ul>
