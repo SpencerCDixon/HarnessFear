@@ -40,3 +40,8 @@ gem 'spring',        group: :development
 gem 'pry-rails'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
+gem 'bootstrap-sass'
+
+group :production do
+  gem 'rails_12factor'
+end

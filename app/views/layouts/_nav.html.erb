@@ -1,20 +1,43 @@
-<header>
-  <div class="navbar pretty">
+<!-- <header class="navbar navbar-inverse">
+    <div class="container">
 
-    <a href="/"><h1 id="logo">HARNESS FEAR</h1></a>
+  <a class="navbar-brand" href="/">Harness Fear</a>
 
-    <nav>
-      <div id="user_nav">
+  <nav>
+    <ul  class="navbar navbar-right">
+      <% if current_user %>
+        Signed in as <strong><%= current_user.name %></strong>!
+        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+      <% else %>
+        <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn btn-default navbar-btn" %></li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+</header> -->
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Harness Fear</a>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
           Signed in as <strong><%= current_user.name %></strong>!
-          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
         <% else %>
-          <div class="medium primary btn" style="margin-top: 8px; margin-right: 10px;">
-            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-          </div>
+          <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
         <% end %>
-      </div>
-    </nav>
 
-  </div>
-</header>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
